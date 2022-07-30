@@ -16,6 +16,10 @@
 		463AC21C2894AE2100C0C4F8 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AC21B2894AE2100C0C4F8 /* NetworkingTests.swift */; };
 		4651B4292895641D00719472 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B4282895641D00719472 /* Networking.swift */; };
 		4651B42D2895646800719472 /* URLSessionNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B42C2895646800719472 /* URLSessionNetworking.swift */; };
+		4651B43428956A2100719472 /* ApiFeaturedTVShowsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B43328956A2100719472 /* ApiFeaturedTVShowsRepositoryTests.swift */; };
+		4651B43528956AD200719472 /* FeaturedTVShowsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B431289569FD00719472 /* FeaturedTVShowsRepository.swift */; };
+		4651B4382895796400719472 /* ApiFeaturedTVShowsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B4372895796400719472 /* ApiFeaturedTVShowsRepository.swift */; };
+		4651B43C2895798400719472 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B43B2895798400719472 /* TVShow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		463AC21B2894AE2100C0C4F8 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		4651B4282895641D00719472 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		4651B42C2895646800719472 /* URLSessionNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworking.swift; sourceTree = "<group>"; };
+		4651B431289569FD00719472 /* FeaturedTVShowsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedTVShowsRepository.swift; sourceTree = "<group>"; };
+		4651B43328956A2100719472 /* ApiFeaturedTVShowsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFeaturedTVShowsRepositoryTests.swift; sourceTree = "<group>"; };
+		4651B4372895796400719472 /* ApiFeaturedTVShowsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFeaturedTVShowsRepository.swift; sourceTree = "<group>"; };
+		4651B43B2895798400719472 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +123,8 @@
 		463AC2012894ADB300C0C4F8 /* ios-showcaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				463AC21B2894AE2100C0C4F8 /* NetworkingTests.swift */,
+				4651B430289569C100719472 /* domain */,
+				4651B42F289569B200719472 /* networking */,
 			);
 			path = "ios-showcaseTests";
 			sourceTree = "<group>";
@@ -131,6 +140,7 @@
 		4651B42A2895643F00719472 /* application */ = {
 			isa = PBXGroup;
 			children = (
+				4651B4362895793200719472 /* repositories */,
 				4651B42B2895645300719472 /* networking */,
 			);
 			path = application;
@@ -147,8 +157,50 @@
 		4651B42E2895675A00719472 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				4651B43A2895797700719472 /* entities */,
+				4651B4392895796C00719472 /* repositories */,
 			);
 			path = domain;
+			sourceTree = "<group>";
+		};
+		4651B42F289569B200719472 /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				463AC21B2894AE2100C0C4F8 /* NetworkingTests.swift */,
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		4651B430289569C100719472 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				4651B43328956A2100719472 /* ApiFeaturedTVShowsRepositoryTests.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		4651B4362895793200719472 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				4651B4372895796400719472 /* ApiFeaturedTVShowsRepository.swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		4651B4392895796C00719472 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				4651B431289569FD00719472 /* FeaturedTVShowsRepository.swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		4651B43A2895797700719472 /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				4651B43B2895798400719472 /* TVShow.swift */,
+			);
+			path = entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +337,9 @@
 			files = (
 				4651B42D2895646800719472 /* URLSessionNetworking.swift in Sources */,
 				463AC1F02894ADB000C0C4F8 /* ViewController.swift in Sources */,
+				4651B43C2895798400719472 /* TVShow.swift in Sources */,
+				4651B4382895796400719472 /* ApiFeaturedTVShowsRepository.swift in Sources */,
+				4651B43528956AD200719472 /* FeaturedTVShowsRepository.swift in Sources */,
 				463AC1EC2894ADB000C0C4F8 /* AppDelegate.swift in Sources */,
 				463AC1EE2894ADB000C0C4F8 /* SceneDelegate.swift in Sources */,
 				4651B4292895641D00719472 /* Networking.swift in Sources */,
@@ -295,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4651B43428956A2100719472 /* ApiFeaturedTVShowsRepositoryTests.swift in Sources */,
 				463AC21C2894AE2100C0C4F8 /* NetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

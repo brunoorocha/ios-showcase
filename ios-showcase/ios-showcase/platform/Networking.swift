@@ -16,5 +16,5 @@ enum NetworkingError: Error {
 }
 
 protocol Networking {
-    func request(_ urlRequest: URLRequest, completion: @escaping (Result<Data?, NetworkingError>) -> Void)
+    func request(_ request: URLRequest, completion: @escaping (Result<Data?, NetworkingError>) -> Void)
 }

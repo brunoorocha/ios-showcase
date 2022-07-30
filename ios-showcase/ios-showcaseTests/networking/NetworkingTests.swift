@@ -9,7 +9,7 @@ import XCTest
 @testable import ios_showcase
 
 final class MockURLSession: URLSession {
-    var receivedRequest: URLRequest?
+    private(set) var receivedRequest: URLRequest?
     var urlResponse: HTTPURLResponse?
     var responseData: Data?
 
