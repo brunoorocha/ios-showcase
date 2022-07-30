@@ -12,9 +12,10 @@ final class MockNetworking: Networking {
     private(set) var receivedRequest: URLRequest?
     private(set) var receivedCompletion: ((Result<Data?, NetworkingError>) -> Void)?
 
-    func request(_ request: URLRequest, completion: @escaping (Result<Data?, NetworkingError>) -> Void) {
+    func request(_ request: URLRequest, completion: @escaping (Result<Data?, NetworkingError>) -> Void) -> DataTask {
         receivedRequest = request
         receivedCompletion = completion
+        return FakeDataTask()
     }
 
     func succeeding(with data: Data?) {
@@ -50,6 +51,24 @@ final class ApiFeaturedTVShowsRepositoryTests: XCTestCase {
         wait(for: [expectation], timeout: 1)
     }
     
+    func testCompletion_WhenDataIsNil_ShouldCompleteWithAnEmptyArray() {
+        let expectation = XCTestExpectation(description: "expected to complete with an empty array")
+        var receivedShows: [TVShow]?
+
+        sut.list { result in
+            guard case .success(let shows) = result else {
+                XCTFail()
+                return
+            }
+            receivedShows = shows
+            expectation.fulfill()
+        }
+        mockNetworking.succeeding(with: nil)
+
+        wait(for: [expectation], timeout: 1)
+        XCTAssertEqual(receivedShows?.count, 0)
+    }
+    
     func testCompletion_WhenDataIsNotInTheRightFormat_ShouldCompleteWithUnableToDecodeError() {
         let expectation = XCTestExpectation(description: "expected to complete with unable to decode error")
 
@@ -65,6 +84,7 @@ final class ApiFeaturedTVShowsRepositoryTests: XCTestCase {
         wait(for: [expectation], timeout: 1)
     }
     
+    
     func testCompletion_WhenNetworkCompleteWithError_ShouldCompleteWithUnknownError() {
         let expectation = XCTestExpectation(description: "expected to complete with unknown error")
         let expectedError = NetworkingError.notFound
@@ -79,6 +99,12 @@ final class ApiFeaturedTVShowsRepositoryTests: XCTestCase {
         mockNetworking.failing(with: expectedError)
 
         wait(for: [expectation], timeout: 1)
+    }
+    
+    func testCompletion_WhenMakeRequest_ShouldDoWithRightEndpoint() {
+        sut.list { _ in }
+        let urlRequest = mockNetworking.receivedRequest
+        XCTAssertEqual(urlRequest?.url, URL(string: TVMazeEndpoint.allShows))
     }
 }
 

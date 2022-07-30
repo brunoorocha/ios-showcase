@@ -19,6 +19,8 @@
 		4651B43528956AD200719472 /* FeaturedTVShowsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B431289569FD00719472 /* FeaturedTVShowsRepository.swift */; };
 		4651B4382895796400719472 /* ApiFeaturedTVShowsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B4372895796400719472 /* ApiFeaturedTVShowsRepository.swift */; };
 		4651B43C2895798400719472 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B43B2895798400719472 /* TVShow.swift */; };
+		4651B5372895972000719472 /* TVMazeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B5362895972000719472 /* TVMazeEndpoint.swift */; };
+		4651B5392895992200719472 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B5382895992200719472 /* Cancelable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		4651B43328956A2100719472 /* ApiFeaturedTVShowsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFeaturedTVShowsRepositoryTests.swift; sourceTree = "<group>"; };
 		4651B4372895796400719472 /* ApiFeaturedTVShowsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFeaturedTVShowsRepository.swift; sourceTree = "<group>"; };
 		4651B43B2895798400719472 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		4651B5362895972000719472 /* TVMazeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeEndpoint.swift; sourceTree = "<group>"; };
+		4651B5382895992200719472 /* Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				4651B4282895641D00719472 /* Networking.swift */,
+				4651B5382895992200719472 /* Cancelable.swift */,
 			);
 			path = platform;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				4651B42C2895646800719472 /* URLSessionNetworking.swift */,
+				4651B5362895972000719472 /* TVMazeEndpoint.swift */,
 			);
 			path = networking;
 			sourceTree = "<group>";
@@ -334,11 +340,13 @@
 				4651B42D2895646800719472 /* URLSessionNetworking.swift in Sources */,
 				463AC1F02894ADB000C0C4F8 /* ViewController.swift in Sources */,
 				4651B43C2895798400719472 /* TVShow.swift in Sources */,
+				4651B5392895992200719472 /* Cancelable.swift in Sources */,
 				4651B4382895796400719472 /* ApiFeaturedTVShowsRepository.swift in Sources */,
 				4651B43528956AD200719472 /* FeaturedTVShowsRepository.swift in Sources */,
 				463AC1EC2894ADB000C0C4F8 /* AppDelegate.swift in Sources */,
 				463AC1EE2894ADB000C0C4F8 /* SceneDelegate.swift in Sources */,
 				4651B4292895641D00719472 /* Networking.swift in Sources */,
+				4651B5372895972000719472 /* TVMazeEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

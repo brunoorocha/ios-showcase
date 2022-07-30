@@ -8,10 +8,12 @@
 import Foundation
 
 enum FeaturedTVShowsRepositoryError: Error {
+    case malformedRequest
     case unableToDecodeResponse(Error)
     case unknown(Error)
 }
 
 protocol FeaturedTVShowsRepository {
-    func list(completion: @escaping (Result<[TVShow], FeaturedTVShowsRepositoryError>) -> Void)
+    @discardableResult
+    func list(completion: @escaping (Result<[TVShow], FeaturedTVShowsRepositoryError>) -> Void) -> Cancelable?
 }

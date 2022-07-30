@@ -8,15 +8,21 @@
 import XCTest
 @testable import ios_showcase
 
-final class MockURLSession: URLSession {
+struct FakeDataTask: DataTask {
+    func resume() {}
+    func cancel() {}
+}
+
+final class MockURLSession: URLSessionable {
     private(set) var receivedRequest: URLRequest?
     var urlResponse: HTTPURLResponse?
     var responseData: Data?
 
-    override func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+    @discardableResult
+    func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> DataTask {
         receivedRequest = request
         completionHandler(responseData, urlResponse, nil)
-        return URLSessionDataTask()
+        return FakeDataTask()
     }
 }
 

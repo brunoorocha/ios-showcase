@@ -14,9 +14,13 @@ final class ApiFeaturedTVShowsRepository: FeaturedTVShowsRepository {
         self.networkingService = networkingService
     }
 
-    func list(completion: @escaping (Result<[TVShow], FeaturedTVShowsRepositoryError>) -> Void) {
-        let request = URLRequest(url: URL(string: "https://api.tvmaze.com/shows?page=0")!)
-        networkingService.request(request) { result in
+    func list(completion: @escaping (Result<[TVShow], FeaturedTVShowsRepositoryError>) -> Void) -> Cancelable? {
+        guard let url = URL(string: TVMazeEndpoint.allShows) else {
+            completion(.failure(.malformedRequest))
+            return nil
+        }
+
+        let cancelable = networkingService.request(.get(url: url)) { result in
             switch result {
             case .success(let data):
                 do {
@@ -34,5 +38,7 @@ final class ApiFeaturedTVShowsRepository: FeaturedTVShowsRepository {
                 completion(.failure(.unknown(error)))
             }
         }
+    
+        return cancelable
     }
 }
