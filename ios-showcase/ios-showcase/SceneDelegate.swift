@@ -18,8 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let repository = ApiFeaturedTVShowsRepository(networkingService: URLSessionNetworking.dispatchingOnMainQueue)
-        let controller = ViewController(repository: repository)
+        let controller = HomeFactory.make()
         window.windowScene = windowScene
         window.rootViewController = UINavigationController(rootViewController: controller)
         window.makeKeyAndVisible()

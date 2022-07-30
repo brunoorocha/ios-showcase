@@ -21,6 +21,12 @@
 		4651B43C2895798400719472 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B43B2895798400719472 /* TVShow.swift */; };
 		4651B5372895972000719472 /* TVMazeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B5362895972000719472 /* TVMazeEndpoint.swift */; };
 		4651B5392895992200719472 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B5382895992200719472 /* Cancelable.swift */; };
+		4651B53E2895A5AA00719472 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B53D2895A5AA00719472 /* HomeViewController.swift */; };
+		4651B5402895A5C400719472 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B53F2895A5C400719472 /* HomeViewModel.swift */; };
+		4651B5422895A96B00719472 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B5412895A96B00719472 /* HomeFactory.swift */; };
+		4651B5442895DCC900719472 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B5432895DCC900719472 /* LoadingView.swift */; };
+		4651B5462895DFE400719472 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B5452895DFE400719472 /* HomeView.swift */; };
+		4651B5482895E05F00719472 /* UIView+fillSuperview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B5472895E05F00719472 /* UIView+fillSuperview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,12 @@
 		4651B43B2895798400719472 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 		4651B5362895972000719472 /* TVMazeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeEndpoint.swift; sourceTree = "<group>"; };
 		4651B5382895992200719472 /* Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
+		4651B53D2895A5AA00719472 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4651B53F2895A5C400719472 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4651B5412895A96B00719472 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		4651B5432895DCC900719472 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		4651B5452895DFE400719472 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4651B5472895E05F00719472 /* UIView+fillSuperview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fillSuperview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +154,7 @@
 		4651B42A2895643F00719472 /* application */ = {
 			isa = PBXGroup;
 			children = (
+				4651B53A2895A56900719472 /* scenes */,
 				4651B4362895793200719472 /* repositories */,
 				4651B42B2895645300719472 /* networking */,
 			);
@@ -204,6 +217,35 @@
 				4651B43B2895798400719472 /* TVShow.swift */,
 			);
 			path = entities;
+			sourceTree = "<group>";
+		};
+		4651B53A2895A56900719472 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4651B53C2895A58600719472 /* home */,
+				4651B53B2895A57E00719472 /* components */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		4651B53B2895A57E00719472 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				4651B5432895DCC900719472 /* LoadingView.swift */,
+				4651B5472895E05F00719472 /* UIView+fillSuperview.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		4651B53C2895A58600719472 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				4651B53D2895A5AA00719472 /* HomeViewController.swift */,
+				4651B53F2895A5C400719472 /* HomeViewModel.swift */,
+				4651B5412895A96B00719472 /* HomeFactory.swift */,
+				4651B5452895DFE400719472 /* HomeView.swift */,
+			);
+			path = home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,11 +382,17 @@
 				4651B42D2895646800719472 /* URLSessionNetworking.swift in Sources */,
 				463AC1F02894ADB000C0C4F8 /* ViewController.swift in Sources */,
 				4651B43C2895798400719472 /* TVShow.swift in Sources */,
+				4651B5462895DFE400719472 /* HomeView.swift in Sources */,
 				4651B5392895992200719472 /* Cancelable.swift in Sources */,
 				4651B4382895796400719472 /* ApiFeaturedTVShowsRepository.swift in Sources */,
+				4651B5442895DCC900719472 /* LoadingView.swift in Sources */,
+				4651B5482895E05F00719472 /* UIView+fillSuperview.swift in Sources */,
 				4651B43528956AD200719472 /* FeaturedTVShowsRepository.swift in Sources */,
 				463AC1EC2894ADB000C0C4F8 /* AppDelegate.swift in Sources */,
+				4651B5402895A5C400719472 /* HomeViewModel.swift in Sources */,
+				4651B53E2895A5AA00719472 /* HomeViewController.swift in Sources */,
 				463AC1EE2894ADB000C0C4F8 /* SceneDelegate.swift in Sources */,
+				4651B5422895A96B00719472 /* HomeFactory.swift in Sources */,
 				4651B4292895641D00719472 /* Networking.swift in Sources */,
 				4651B5372895972000719472 /* TVMazeEndpoint.swift in Sources */,
 			);
