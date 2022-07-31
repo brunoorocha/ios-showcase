@@ -51,6 +51,9 @@ final class HomeView: UIView {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TVShowCollectionViewCell.reusableIdentifier, for: indexPath) as? TVShowCollectionViewCell else {
             fatalError()
         }
+        if let coverUrl = URL(string: model.image.medium) {
+            cell.coverImageView.loadImage(from: coverUrl)
+        }
         cell.titleLabel.text = model.title
         return cell
     }

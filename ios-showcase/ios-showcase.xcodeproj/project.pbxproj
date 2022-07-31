@@ -30,6 +30,7 @@
 		4651B54A2895E41A00719472 /* TVShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651B5492895E41A00719472 /* TVShowCollectionViewCell.swift */; };
 		46AB64142896CBDC009DF8F7 /* HomeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB64132896CBDC009DF8F7 /* HomeCollectionViewLayout.swift */; };
 		46AB64162896CBF5009DF8F7 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB64152896CBF5009DF8F7 /* Reusable.swift */; };
+		46AB641A2896D4A4009DF8F7 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB64192896D4A4009DF8F7 /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		4651B5492895E41A00719472 /* TVShowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowCollectionViewCell.swift; sourceTree = "<group>"; };
 		46AB64132896CBDC009DF8F7 /* HomeCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewLayout.swift; sourceTree = "<group>"; };
 		46AB64152896CBF5009DF8F7 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		46AB64192896D4A4009DF8F7 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 				4651B5492895E41A00719472 /* TVShowCollectionViewCell.swift */,
 				46AB64132896CBDC009DF8F7 /* HomeCollectionViewLayout.swift */,
 				46AB64152896CBF5009DF8F7 /* Reusable.swift */,
+				46AB64192896D4A4009DF8F7 /* AsyncImageView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				46AB64162896CBF5009DF8F7 /* Reusable.swift in Sources */,
 				4651B4292895641D00719472 /* Networking.swift in Sources */,
 				4651B5372895972000719472 /* TVMazeEndpoint.swift in Sources */,
+				46AB641A2896D4A4009DF8F7 /* AsyncImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
