@@ -31,11 +31,3 @@ final class AsyncImageView: UIImageView {
         }
     }
 }
-
-extension AsyncImageView {
-    static func loadingImage(from url: URL) -> AsyncImageView {
-        let view = AsyncImageView(frame: .zero)
-        view.loadImage(from: url)
-        return view
-    }
-}

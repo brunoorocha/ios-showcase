@@ -8,12 +8,14 @@
 import Foundation
 
 struct TVShow: Decodable {
+    let id: Int
     let title: String
     let image: TVShowCover
     let genres: [String]
     
     enum CodingKeys: String, CodingKey {
         case title = "name"
+        case id
         case image
         case genres
     }
